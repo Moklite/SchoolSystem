@@ -55,6 +55,14 @@ namespace SchoolSystem
             else if (input == "2")
             {
                 Console.WriteLine("Student Name: " + result.StudentName);
+                Console.WriteLine("Class: " + result.Class);
+
+                var table = new ConsoleTable("Subject", "CA(40)", "Exam(60)", "Average(100)", "Remark");
+                table .AddRow(result.Subject, result.Ca, result.Exam, result.Average, result.Remark);
+
+                table.Write();
+
+                //ConsoleTable.From((IEnumerable<Result>)result).Write();
                 //ConsoleTable.From<Result>.Write();
             }
             
